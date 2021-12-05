@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap');
+
+:root{
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --paragraph-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray:hsl(0, 0%, 95%);
+}
+
+*, *::after, *::before{
+    margin:0;
+    padding:0;
+    border:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background:var(--very-light-gray);
+}
+
+@media (max-width:375px){
+    body {
+        flex-wrap: wrap;
+        margin: 5rem 0;
+    }
+    .container {
+        flex-wrap: wrap;
+        margin:auto;
+        max-width: 20rem;
+    }
+}
+
+/* mobile: 375px */
+
+.container {
+    width:max-content;
+    height:max-content;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+}
+
+.column{
+    width:20rem;
+    height:30rem;
+    background: var(--bright-orange);
+    padding: 3rem;
+}
+
+.column:nth-child(2) {
+    background: var(--dark-cyan);
+}
+
+.column:nth-child(3) {
+    background: var(--very-dark-cyan);
+}
+
+.column img {
+    margin-bottom: 2rem;
+}
+
+.column h1 {
+    text-transform: uppercase;
+    color:var(--very-light-gray);
+    font-weight: 700;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.column p {
+    color: var(--paragraph-white);
+    font-weight: 400;
+    margin-bottom: 6rem;
+    line-height: 1.5rem;
+    width: 90%;
+}
+
+.column button {
+    background:var(--very-light-gray);
+    height:3rem;
+    width:8rem;
+    border-radius: 2rem;
+    color: var(--bright-orange);
+    font-weight: 400;
+}
+
+.column:nth-child(2) button{
+    color: var(--dark-cyan);
+}
+
+.column:nth-child(3) button{
+    color: var(--very-dark-cyan);
+}
+
+.column button:hover {
+    transition: 250ms ease-out;
+    background:transparent;
+    color: var(--very-light-gray);
+    border: 2px solid var(--very-light-gray);
+}
+
